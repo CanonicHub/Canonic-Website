@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanonWeb</title>
+</head>
+<body>
+    <h1>CanonWeb</h1>
+    <p1>Website Info:</p>
+    <p>Current Version: <span id="version">Loading...</span></p>
+    <p>Commits: <span id="commitCount">Loading...</span></p>
+    <p>Time elapsed: <span id="elapsedTime">0</span> <span id="timeUnit">seconds</span></p>
+    <p></p>
+
+    <script>
+
+        // Define the version number
+        const version = "1.0.0 (Alpha)";
+
+        // Display the version in the HTML element with id="version"
+        document.getElementById('version').innerText = version;
+
+        // Record the time when the page is loaded
+        const startTime = Date.now();
+
+        // Function to update the elapsed time
+        function updateElapsedTime() {
+            const currentTime = Date.now();
+            const elapsedTime = Math.floor((currentTime - startTime) / 1000); // time in seconds
+
+            // Get the appropriate unit (singular or plural)
+            const timeUnit = elapsedTime === 1 ? 'second' : 'seconds';
+
+            // Update the displayed time and unit
+            document.getElementById('elapsedTime').innerText = elapsedTime;
+            document.getElementById('timeUnit').innerText = timeUnit;
+        }
+
+        // Update elapsed time every second
+        setInterval(updateElapsedTime, 1000);
+
+        // Replace these with your own GitHub username and repository name
+        const username = 'CanonicHub';
+        const repository = 'Canonic-Website';
+        const token = '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';
+
+        // GitHub API URL for getting commits
+        const apiUrl = `https://api.github.com/repos/${username}/${repository}/commits`;
+
+        // Function to fetch commits and display count
+        async function getCommitCount() {
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'Authorization': `token ${token}`  // Optional: Include if using a token
+                    }
+                });
+
+                if (response.ok) {
+                    const commits = await response.json();
+                    document.getElementById('commitCount').innerText = commits.length;
+                } else {
+                    document.getElementById('commitCount').innerText = 'Error fetching data';
+                    console.error('GitHub API error', response.statusText);
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+                document.getElementById('commitCount').innerText = 'Error fetching data';
+            }
+        }
+
+        // Call the function to get commit count
+        getCommitCount();
+    </script>
+</body>
+</html>
