@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Tale'; /* Choose a name for the font */
+    src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    color: white;
+
+    letter-spacing: 2px; /* Adjust this value for more or less spacing */
+
+    display: flex; /* Set the display to flex */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+}
+
+p1 {
+    color: white;
+    font-family: 'Tale', sans-serif; /* Apply the custom font */
+}
+
+p {
+    color: white;
+    font-family: 'Tale', sans-serif; /* Apply the custom font */
+}
+
