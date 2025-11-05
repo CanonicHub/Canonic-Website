@@ -16,6 +16,7 @@ h1 {
     display: flex; /* Set the display to flex */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 
 }
 
@@ -28,6 +29,7 @@ h2 {
     display: flex; /* Set the display to flex */
     justify-content: left; /* Center horizontally */
     align-items: center; /* Center vertically */
+        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 
 }
 
@@ -36,20 +38,24 @@ h3 {
     color: white;
     letter-spacing: 2px; /* Adjust this value for more or less spacing */
     display: flex; /* Set the display to flex */
+        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 }
 
 p1 {
     color: white;
     font-family: 'Tale', sans-serif; /* Apply the custom font */
+        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 }
 ul {
     color: white;
     font-family: 'Tale', sans-serif; /* Apply the custom font */
     letter-spacing: 2px; 
+        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 }
 
 p {
     color: white;
     font-family: 'Tale', sans-serif; /* Apply the custom font */
+        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 }
 
