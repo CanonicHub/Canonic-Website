@@ -19,9 +19,33 @@ h1 {
 
 }
 
+h2 {
+    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    color: white;
+
+    letter-spacing: 2px; /* Adjust this value for more or less spacing */
+
+    display: flex; /* Set the display to flex */
+    justify-content: left; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+}
+
+h3 {
+    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    color: white;
+    letter-spacing: 2px; /* Adjust this value for more or less spacing */
+    display: flex; /* Set the display to flex */
+}
+
 p1 {
     color: white;
     font-family: 'Tale', sans-serif; /* Apply the custom font */
+}
+ul {
+    color: white;
+    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    letter-spacing: 2px; 
 }
 
 p {
