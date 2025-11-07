@@ -1,3 +1,3 @@
-This is the official source code for **CanonWeb**. 
+This is the official source code for **NiteLyte**. 
 
-**CanonWeb** is my own personal website where I post info about myself.
+This is my own personal website where I post info about myself.

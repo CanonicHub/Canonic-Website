@@ -62,20 +62,18 @@ ul {
         src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 }
 
-
-
 p {
-    color: rgb(32, 32, 32);
+    color: white;
     font-family: 'Tale', sans-serif; /* Apply the custom font */
         src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
-
-    display: flex; /* Set the display to flex */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-
-
 }
 
+div.img_holder img {
+    
+        float: middle;
+        margin: 5;
+
+}
 
 footer {
     /*background-color: #333;*/
