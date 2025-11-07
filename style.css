@@ -3,8 +3,17 @@
     src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 }
 
+main {
+    flex-grow: 1; /* Allows main content to take up available space */
+}
+
 body {
     background-color: black;
+
+    margin: 0; /* Remove default body margin */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -27,7 +36,7 @@ h2 {
     letter-spacing: 2px; /* Adjust this value for more or less spacing */
 
     display: flex; /* Set the display to flex */
-    justify-content: left; /* Center horizontally */
+    justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
         src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
 
@@ -57,5 +66,24 @@ p {
     color: white;
     font-family: 'Tale', sans-serif; /* Apply the custom font */
         src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
+}
+
+div.img_holder img {
+    
+        float: middle;
+        margin: 5;
+
+}
+
+footer {
+    /*background-color: #333;*/
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+    /* For fixed positioning uncomment the following */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 

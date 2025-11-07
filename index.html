@@ -1,58 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+    <audio autoplay loop>
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
-    <title>CanonWeb</title>
+    <title>NyteLyte</title>
 </head>
 <body>
-    <h1>CanonWeb</h1>
+    <h1><img src="img/title/maintitle.png" alt="Title"></h1>
 
-    <h2>About Me!</h2>
+    <div class = "img_holder" style="text-align: center;" >
+        <img src="img/options/aboutme.png" width="374.25" height="73.5"/>
+        <img src="img/options/gallery.png" width="312" height="67.5"/>
+        <img src="img/options/projects.png" width="363.75" height="72"/>
+        <img src="img/options/games.png" width="231.25" height="69"/> 
+        <img src="img/options/info.png" width="168" height="68.25"/>
+    </div>
 
-        <p1>I am a fan of:</p1>
-        <h3>Video Games:</h3>
-        <ul style="list-style-type:circle;">
-            <li><a href="https://undertale.com/">UNDERTALE</a> and <a href="https://deltarune.com/">DELTARUNE</a></li>
-            <li><a href="https://ninja-muffin24.itch.io/funkin">Friday Night Funkin'</a></li>
-            <li>The <a href="https://www.ea.com/games/plants-vs-zombies">Plants VS Zombies</a> Franchise</li>
-            <li>Roblox; specifically <a href="https://www.roblox.com/games/14608970270/Outcome-Memories-v0-1">Outcome Memories</a> (0.2 boutta be lit)</li>
-            <br>
-
-            Shall continue list at a later date! :D
-        </ul>
-
-
-
-
-
-
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     <footer>
         <h2>Website Info:</h2>
         <p>Current Version: <span id="version">Loading...</span></p>
@@ -61,6 +29,7 @@
         <p></p>
     </footer>
 
+    <!-- script for elapsed time in website -->
 
     <script>
 
@@ -88,39 +57,6 @@
 
         // Update elapsed time every second
         setInterval(updateElapsedTime, 1000);
-
-        // Replace these with your own GitHub username and repository name
-        const username = 'CanonicHub';
-        const repository = 'Canonic-Website';
-        const token = '';
-
-        // GitHub API URL for getting commits
-        const apiUrl = `https://api.github.com/repos/${username}/${repository}/commits`;
-
-        // Function to fetch commits and display count
-        async function getCommitCount() {
-            try {
-                const response = await fetch(apiUrl, {
-                    headers: {
-                        'Authorization': `token ${token}`  // Optional: Include if using a token
-                    }
-                });
-
-                if (response.ok) {
-                    const commits = await response.json();
-                    document.getElementById('commitCount').innerText = commits.length;
-                } else {
-                    document.getElementById('commitCount').innerText = 'Error fetching data';
-                    console.error('GitHub API error', response.statusText);
-                }
-            } catch (error) {
-                console.error('Fetch error:', error);
-                document.getElementById('commitCount').innerText = 'Error fetching data';
-            }
-        }
-
-        // Call the function to get commit count
-        getCommitCount();
     </script>
 </body>
 </html>
